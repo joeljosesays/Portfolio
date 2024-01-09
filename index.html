@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/4219da86d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id = "sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> Data Analyst / Developer </p>
+                <h1>Hello, I'm <span>Joel</span> Jose,</br> residing in Canada</h1>
+            </div>
+        </div>
+    </div>
+    <!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/JOEL.jpg" alt="Me">
+                </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am an energetic and proactive Analytics graduate professional with a strong inclination 
+                           toward deriving data-driven insights.Proficient in an array of technical skills, 
+                           I am capable in machine learning modeling and development. My journey into data science and analytics 
+                           has been enriched by diverse academic and professional experiences.  I bring a unique blend of technical expertise
+                           and analytical prowess. My enthusiasm for cutting-edge technologies and open-source platforms 
+                           fuels my continuous learning mindset.</p>
+
+                           <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                           </div>
+
+                           <div class="tab-content active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming Languages</span></br>Python</li>
+                                <li><span>Databases</span></br>MySQL,PostgreSQL</li>
+                                <li><span>BI Tool</span></br>PowerBI</li>
+                                <li><span>Web Development</span></br>HTML,CSS,JavaScript,Django</li>
+                                <li><span>DevOps</span></br>Github,Gitlab,Docker</li>
+                            </ul>
+                           </div>
+
+                           <div class="tab-content" id="education">
+                            <ul>
+                                <li><span>2022-23  St.Lawrence College,Kingston,Ontario</span></br>Post-graduate Certificate in Business Analytics</li>
+                                <li><span>2021-22  ITC Academy of Kerala, India</span></br>Data Science and Analytics Certificate</li>
+                                <li><span>2017-21  RSET</span></br>Bachelor of Technology in Mechanical Engineering</li>
+
+                            </ul>
+                           </div>
+
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</br>
+    <!--Projects-->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Image Classification with CNN</h2>
+                    <p> Using Python with libraries like NumPy, pandas, scikit-learn, Keras, and Matplotlib,</br>
+                        the project achieves a well-generalizing model of deep learning in image classification tasks,</br> 
+                        contributing to the understanding of bee species for ecological and agricultural purposes.</p>
+                    <a href="https://github.com/joeljosesays/Deep-Learning">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <i class="fa-solid fa-database"></i>
+                    <i class="fa-brands fa-docker"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Customer Relationship Management App </h2>
+                    <p> In this project, I developed a CRM (Customer Relationship Management) application using,</br> 
+                        Django as the web framework and MySQL as the database.To enhance scalability, portability,</br>
+                        and ease of deployment, the application was dockerized. </p></br>
+                    <a href="https://github.com/joeljosesays/Django-CRM-Docker">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-spotify"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Spotify Sales Dashboard</h2>
+                    <p> Currently working on this project...........</p></br>
+                <!-----<a href="#">learn more</a> ---->
+                </div>  
+            </div>
+        </div>
+    </div>
+    <!--Contact Form-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> joeljose99.ca@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> (+1) 343-989-0492</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/joeljosesays/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/joeljose-analytics-tech/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/joeljosesays"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/JoseJ.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+
+        function opentab(tabname) {
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add('active-link')
+            document.getElementById(tabname).classList.add('active-tab')
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById('sidemenu');
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz_ceRCkoHBTlMHkRr-9MwwOtR6h4KeCTLWxboCfeuUzANNL8jRUl-g4wXDdmdDpbxPqw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },2000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>
